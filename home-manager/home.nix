@@ -48,7 +48,7 @@
    home.packages = with pkgs; [ librewolf flatpak lutris
    zellij godot_4 keepassxc discord spotify neovim nodejs
 	unzip zip clang cmake gnumake python3 qt5.full boost
-	libreoffice-qt];
+	libreoffice-qt logseq];
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
