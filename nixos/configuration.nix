@@ -88,6 +88,8 @@
   nssmdns=true;
   openFirewall = true;
   };
+
+  services.blueman.enable=true;
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
@@ -130,6 +132,11 @@
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
     #media-session.enable = true;
+  };
+
+  hardware.bluetooth={
+  enable=true;
+  powerOnBoot=true;
   };
 
   # Enable automatic login for the user.
