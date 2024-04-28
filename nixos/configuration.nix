@@ -168,7 +168,9 @@ qt = {
   # TODO: This is just an example, be sure to use whatever bootloader you prefer
   boot.loader.systemd-boot.enable = true;
 
-  programs.zsh.enable = true;
+  programs.zsh={
+  enable = true;
+  };
   users.defaultUserShell = pkgs.zsh;
 
   # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
