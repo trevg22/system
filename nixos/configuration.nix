@@ -82,7 +82,8 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-
+  
+  services.flatpak.enable = true;
   services.avahi = {
   enable = true;
   nssmdns=true;
