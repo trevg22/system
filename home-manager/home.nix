@@ -47,9 +47,10 @@
   # programs.neovim.enable = true;
    home.packages = with pkgs; [ librewolf flatpak lutris
    zellij godot_4 keepassxc discord spotify neovim nodejs
-	unzip zip clang cmake gnumake python3 qt5.full boost
+	unzip zip gcc cmake gnumake python3 qt5.full boost
 	libreoffice-qt logseq
 	alacritty jam clang-tools sublime-merge
+	flatpak-builder ripgrep-all pipx
 	];
 
   # Enable home-manager and git
