@@ -45,7 +45,7 @@
   };
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
-   home.packages = with pkgs; [ librewolf flatpak lutris
+   home.packages = with pkgs; [ librewolf flatpak 
    zellij godot_4 keepassxc discord spotify neovim nodejs
 	unzip zip gcc cmake gnumake python3 qt5.full boost
 	libreoffice-qt logseq
