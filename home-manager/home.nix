@@ -48,7 +48,7 @@
    home.packages = with pkgs; [ librewolf flatpak 
    zellij godot_4 keepassxc discord spotify neovim nodejs
 	unzip zip gcc cmake gnumake python3 qt5.full boost
-	libreoffice-qt logseq
+	libreoffice-qt logseq thunderbird
 	alacritty jam clang-tools sublime-merge
 	flatpak-builder ripgrep-all pipx
 	];
