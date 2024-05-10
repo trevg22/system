@@ -50,7 +50,7 @@
 	unzip zip gcc cmake gnumake python3 qt5.full boost
 	libreoffice-qt logseq thunderbird
 	alacritty jam clang-tools sublime-merge
-	flatpak-builder ripgrep-all pipx
+	flatpak-builder ripgrep-all pipx lazygit
 	];
 
   # Enable home-manager and git
