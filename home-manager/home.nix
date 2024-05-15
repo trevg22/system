@@ -46,7 +46,7 @@
 
   # Add stuff for your user as you see fit:
    home.packages = with pkgs; [ librewolf flatpak 
-   zellij godot_4 keepassxc discord spotify nodejs
+   zellij keepassxc discord spotify nodejs
 	unzip zip clang cmake gnumake python3 qt5.full boost
 	libreoffice-qt logseq thunderbird glxinfo libGLU
 	alacritty jam clang-tools sublime-merge
