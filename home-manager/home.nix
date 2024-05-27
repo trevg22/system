@@ -15,7 +15,14 @@
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
   ];
-
+  
+  programs.zsh={
+  shellAliases = {
+    ll = "ls -l";
+    update = "sudo nixos-rebuild switch --flake .";
+    nvim="flatpak run io.neovim.nvim";
+  };
+  };
   nixpkgs = {
     # You can add overlays here
     overlays = [
@@ -50,7 +57,8 @@
 	unzip zip clang cmake gnumake python3 qt5.full boost
 	libreoffice-qt logseq thunderbird glxinfo libGLU
 	alacritty jam clang-tools sublime-merge
-	flatpak-builder ripgrep-all pipx lazygit
+	flatpak-builder ripgrep-all pipx lazygit qbittorrent
+	qalculate-qt firefox
 	];
 
   # Enable home-manager and git
