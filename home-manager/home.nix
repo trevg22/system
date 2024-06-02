@@ -7,7 +7,8 @@
   pkgs,
   ...
 }: {
-  # You can import other home-manager modules here
+
+    # You can import other home-manager modules here
   imports = [
     # If you want to use home-manager modules from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModule
@@ -58,7 +59,7 @@
 	libreoffice-qt logseq thunderbird glxinfo libGLU
 	alacritty jam clang-tools sublime-merge
 	flatpak-builder ripgrep-all pipx lazygit qbittorrent
-	qalculate-qt firefox
+	qalculate-qt 
 	];
 
   # Enable home-manager and git
@@ -68,7 +69,20 @@
     userName  = "Trevor";
     userEmail = "trevor@trevg.xyz";
   };
-  # Nicely reload system units when changing configs
+
+
+  programs.firefox = {
+    enable = true;
+    profiles.trevor = {
+      extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+        ublock-origin
+        keepassxc-browser
+      ];
+
+    };
+  };
+
+    # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
