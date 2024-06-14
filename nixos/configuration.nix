@@ -86,7 +86,7 @@
   services.flatpak.enable = true;
   services.avahi = {
   enable = true;
-  nssmdns=true;
+  nssmdns4=true;
   openFirewall = true;
   };
 
@@ -95,7 +95,7 @@
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
+  services.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
 
     services = {
@@ -108,8 +108,8 @@
 };
   # Configure keymap in X11
   services.xserver = {
-    layout = "us";
-    xkbVariant = "";
+    xkb.layout = "us";
+    xkb.variant = "";
   };
 
   # Enable CUPS to print documents.
@@ -141,8 +141,8 @@
   };
 
   # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "trevor";
+  services.displayManager.autoLogin.enable= true;
+  services.displayManager.autoLogin.user = "trevor";
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
