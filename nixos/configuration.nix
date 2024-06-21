@@ -95,7 +95,10 @@
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm={
+  enable = true;
+  wayland.enable=true;
+  };
   services.xserver.desktopManager.plasma5.enable = true;
 
     services = {
@@ -149,7 +152,10 @@
   environment.systemPackages = with pkgs; [
   vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   home-manager
-  pkgs.hplipWithPlugin
+  hplipWithPlugin
+  #wireguard
+  wireguard-tools
+  wireguard-go
   #  wget
   ];
 qt = {
@@ -168,6 +174,7 @@ qt = {
 
   # TODO: This is just an example, be sure to use whatever bootloader you prefer
   boot.loader.systemd-boot.enable = true;
+  #boot.extraModulePackages = [ config.boot.kernelPackages.wireguard ];
 
   programs.zsh={
   enable = true;
@@ -190,6 +197,7 @@ qt = {
       extraGroups = ["wheel"];
     };
   };
+
 
   # This setups a SSH server. Very important if you're setting up a headless system.
   # Feel free to remove if you don't need it.
