@@ -59,7 +59,7 @@
 	libreoffice-qt logseq thunderbird glxinfo libGLU
 	alacritty jam clang-tools sublime-merge
 	flatpak-builder ripgrep-all pipx lazygit qbittorrent
-	qalculate-qt 
+	qalculate-qt fuzzel foot pulsemixer wowup-cf
 	];
 
   # Enable home-manager and git

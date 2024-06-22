@@ -93,14 +93,19 @@
   services.blueman.enable=true;
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-
+  programs.hyprland = {
+    # Install the packages from nixpkgs
+    enable = true;
+    # Whether to enable XWayland
+    xwayland.enable = true;
+  };
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm={
   enable = true;
   wayland.enable=true;
   };
   services.xserver.desktopManager.plasma5.enable = true;
-
+  services.xserver.displayManager.sddm.settings.Wayland.SessionDir = "${pkgs.plasma5Packages.plasma-workspace}/share/wayland-sessions";
     services = {
     syncthing = {
         enable = true;
