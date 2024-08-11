@@ -105,7 +105,7 @@
   wayland.enable=true;
   };
   services.xserver.desktopManager.plasma5.enable = true;
-  services.xserver.displayManager.sddm.settings.Wayland.SessionDir = "${pkgs.plasma5Packages.plasma-workspace}/share/wayland-sessions";
+  services.displayManager.sddm.settings.Wayland.SessionDir = "${pkgs.plasma5Packages.plasma-workspace}/share/wayland-sessions";
     services = {
     syncthing = {
         enable = true;

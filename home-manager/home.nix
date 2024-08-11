@@ -60,6 +60,7 @@
 	alacritty jam clang-tools sublime-merge
 	flatpak-builder ripgrep-all pipx lazygit qbittorrent
 	qalculate-qt fuzzel foot pulsemixer wowup-cf fzf
+	rustup
 	];
 
   # Enable home-manager and git
