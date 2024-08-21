@@ -4,6 +4,7 @@
   inputs = {
     # Nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs-unstable.url="github:nixos/nixpkgs/nixos-unstable";
 
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-24.05";
@@ -24,10 +25,12 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-unstable,
     home-manager,
     ...
   } @ inputs: let
     inherit (self) outputs;
+    pkgs-unstable=nixpkgs-unstable.legacyPackages.x86_64-linux;
   in {
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
@@ -46,7 +49,7 @@
       # FIXME replace with your username@hostname
       "trevor@nixos" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs;};
+        extraSpecialArgs = {inherit inputs outputs pkgs-unstable;};
         # > Our main home-manager configuration file <
         modules = [./home-manager/home.nix];
       };

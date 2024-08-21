@@ -5,6 +5,7 @@
   lib,
   config,
   pkgs,
+  pkgs-unstable,
   ...
 }: {
 
@@ -60,7 +61,8 @@
 	alacritty jam clang-tools sublime-merge
 	flatpak-builder ripgrep-all pipx lazygit qbittorrent
 	qalculate-qt fuzzel foot pulsemixer wowup-cf fzf
-	rustup eza zoxide starship
+	rustup eza zoxide starship htop gradle android-studio
+	steam-run pkgs-unstable.neovim 
 	];
 
   # Enable home-manager and git
